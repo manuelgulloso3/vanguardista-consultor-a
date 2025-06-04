@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanguardista y Consultoría</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Vanguardista y Consultoría</h1>
+    <p>Innovación y guía para tu bienestar integral</p>
+  </header>
+
+  <nav>
+    <button onclick="document.getElementById('inicio').scrollIntoView({behavior:'smooth'})">Inicio</button>
+    <button onclick="document.getElementById('nosotros').scrollIntoView({behavior:'smooth'})">Sobre Nosotros</button>
+    <button onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">Servicios</button>
+    <button onclick="document.getElementById('blog').scrollIntoView({behavior:'smooth'})">Blog</button>
+    <button onclick="document.getElementById('agenda').scrollIntoView({behavior:'smooth'})">Agenda tu Cita</button>
+    <button onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Contáctanos</button>
+  </nav>
+
+  <section id="inicio">
+    <img src="IMG/IMG/LOGO SALUD Y BINESTAR.png" alt="Bienestar y salud" />
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <img src="IMG/IMG/ESPECIALISTAS.jpg" alt="Equipo de salud" />
+    <p>
+      Somos una consultora dedicada a mejorar la calidad de vida de personas y
+      organizaciones, con ética, profesionalismo e innovación en salud física,
+      emocional y mental.
+    </p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+
+    <div class="servicio salud">
+      <h3>Salud</h3>
+      <img src="IMG/IMG/ODONTOLOGIA.jpg" alt="Médicos especialistas" />
+      <p>
+        Contamos con profesionales en el área de la salud como médicos generales,
+        especialistas, odontólogos, oftalmólogos, entre otros.
+      </p>
+    </div>
+
+    <div class="servicio nutricion">
+      <h3>Nutrición</h3>
+      <img src="img/IMG/VITAMINAS.jpg" alt="Nutricionista especialista" />
+      <p>Orientación profesional sobre una nutrición adecuada apoyada con imágenes educativas:</p>
+      <ul>
+        <li><img src="img/IMG/PROTEINAS.jpg" alt="Proteínas" /> Proteínas</li>
+        <li><img src="img/IMG/GRASAS.jpg" alt="Lípidos" /> Lípidos</li>
+        <li><img src="img/IMG/CARBOHIDRATOS.jpg" alt="Carbohidratos" /> Carbohidratos</li>
+        <li><img src="img/IMG/VITAMINAS 2.jpg" alt="Vitaminas" /> Vitaminas</li>
+      </ul>
+    </div>
+
+    <div class="servicio deporte">
+      <h3>Actividad Física y Deporte</h3>
+      <img src="img/IMG/DEPORTE TROTE.jpg" alt="Ejercicio por edad" />
+      <p>Planes de ejercicio personalizados según grupo etario y objetivos:</p>
+      <ul>
+        <li><img src="img/IMG/mantener ejrcicio.jpg" alt="Ejercicio para la salud" /> Para mantener la salud</li>
+        <li><img src="img/IMG/mejorar el rendimineto.jpg" alt="Ejercicio para el rendimiento" /> Para mejorar el rendimiento</li>
+        <li><img src="img/IMG/alto rendimiento.jpg" alt="Ejercicio competitivo" /> Para competir</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog - Aprende con Nosotros</h2>
+    <img src="img/IMG/VITAMINAS.jpg" alt="Blog de salud y bienestar" />
+    <p>
+      Publicaciones semanales con consejos, entrevistas y herramientas para tu
+      bienestar integral.
+    </p>
+  </section>
+
+  <section id="agenda">
+    <h2>Agenda tu Cita</h2>
+    <img src="img/IMG/agenda tu cita.jpg" alt="Agenda tu cita" />
+    <form>
+      <label>Nombre: <input type="text" name="nombre" /></label><br />
+      <label>Teléfono: <input type="tel" name="telefono" /></label><br />
+      <label>Correo: <input type="email" name="correo" /></label><br />
+      <label>Tipo de servicio: <input type="text" name="servicio" /></label><br />
+      <label>Fecha y hora: <input type="datetime-local" name="fecha" /></label><br />
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+        <p><strong>Dirección:</strong> Calle Principal #123, La Jagua de Ibirico, Colombia</p>
+    <p><strong>Teléfono:</strong> +57 311 7619625</p>
+    <p><strong>Correo:</strong> contacto@svanguardistaconsultoria.com</p>
+  </section>
+
+  <footer>
+    <p>
+      © 2025 Bienestar y Salud Vanguardista Consultoría - Todos los derechos reservados son de la empresa elaborado por Manuel Gulloso Amary.<br />
+      Dirección: Calle Principal #123, La Jagua de Ibirico, Colombia<br />
+      Teléfono: +57 311 7619625 | Correo: contacto@svanguardistaconsultoria.com
+    </p>
+  </footer>
+</body>
+</html>
