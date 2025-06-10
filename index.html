@@ -4,15 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vanguardista y Consultoría</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- ========================== HEADER ========================== -->
+  <header class="text-center p-4 bg-dark text-white">
     <h1>Vanguardista y Consultoría</h1>
     <p>Innovación y guía para tu bienestar integral</p>
   </header>
 
-  <nav>
+  <!-- ========================== NAVEGACIÓN ========================== -->
+  <nav class="text-center my-3">
     <button onclick="document.getElementById('inicio').scrollIntoView({behavior:'smooth'})">Inicio</button>
     <button onclick="document.getElementById('nosotros').scrollIntoView({behavior:'smooth'})">Sobre Nosotros</button>
     <button onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">Servicios</button>
@@ -21,91 +27,177 @@
     <button onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Contáctanos</button>
   </nav>
 
-  <section id="inicio">
-    <img src="IMG/IMG/LOGO SALUD Y BINESTAR.png" alt="Bienestar y salud" />
-  </section>
+  <!-- ========================== CARRUSEL ========================== -->
+  <div id="inicio" class="carrusel-panoramico">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/IMG/deporte para carrucel 2.avif" class="d-block w-100" alt="Deporte">
+        </div>
+        <div class="carousel-item">
+          <img src="img/IMG/salud carrucel 3.avif" class="d-block w-100" alt="Salud">
+        </div>
+        <div class="carousel-item">
+          <img src="img/IMG/alimentos saludables carrucel.avif" class="d-block w-100" alt="Nutrición">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
 
-  <section id="nosotros">
+  <!-- ========================== NOSOTROS ========================== -->
+  <section id="nosotros" class="seccion-nosotros text-center p-5">
+    <img src="img/IMG/logo nuevo v y c.png" alt="Logo Vanguardista y Consultoría" class="logo-central mb-3">
     <h2>Sobre Nosotros</h2>
-    <img src="IMG/IMG/ESPECIALISTAS.jpg" alt="Equipo de salud" />
     <p>
-      Somos una consultora dedicada a mejorar la calidad de vida de personas y
-      organizaciones, con ética, profesionalismo e innovación en salud física,
-      emocional y mental.
+      Somos una consultora dedicada a transformar la vida de las personas y organizaciones a través de la nutrición, la salud y la alimentación consciente. Nuestro propósito es claro: promover un estilo de vida saludable, equilibrado y sostenible que potencie el bienestar físico, emocional y mental de quienes nos rodean.
+
+      Creemos firmemente que la alimentación no solo es una necesidad biológica, sino una herramienta poderosa para prevenir enfermedades, mejorar el rendimiento físico e intelectual y fortalecer el vínculo entre cuerpo y mente. Por eso, trabajamos con pasión y responsabilidad en el diseño de estrategias personalizadas de nutrición y salud integral, adaptadas a las necesidades reales de cada persona, familia, empresa o comunidad.
     </p>
   </section>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
+  <!-- ========================== SERVICIOS ========================== -->
+  <section id="servicios" class="p-5 bg-light">
+    <h2 class="text-center mb-4">Servicios</h2>
 
-    <div class="servicio salud">
+    <!-- Salud -->
+    <div class="servicio salud mb-4 text-center">
       <h3>Salud</h3>
-      <img src="IMG/IMG/ODONTOLOGIA.jpg" alt="Médicos especialistas" />
-      <p>
-        Contamos con profesionales en el área de la salud como médicos generales,
-        especialistas, odontólogos, oftalmólogos, entre otros.
-      </p>
+      <a href="https://youtu.be/ZygbuZ4F44Q" target="_blank">
+        <img src="img/IMG/ODONTOLOGIA.jpg" alt="Salud" class="img-fluid" />
+      </a>
+      <p>Contamos con profesionales en medicina general, odontología, oftalmología, y más.</p>
     </div>
 
-    <div class="servicio nutricion">
+    <!-- Nutrición -->
+    <div class="servicio nutricion mb-4 text-center">
       <h3>Nutrición</h3>
-      <img src="img/IMG/VITAMINAS.jpg" alt="Nutricionista especialista" />
-      <p>Orientación profesional sobre una nutrición adecuada apoyada con imágenes educativas:</p>
-      <ul>
-        <li><img src="img/IMG/PROTEINAS.jpg" alt="Proteínas" /> Proteínas</li>
-        <li><img src="img/IMG/GRASAS.jpg" alt="Lípidos" /> Lípidos</li>
-        <li><img src="img/IMG/CARBOHIDRATOS.jpg" alt="Carbohidratos" /> Carbohidratos</li>
-        <li><img src="img/IMG/VITAMINAS 2.jpg" alt="Vitaminas" /> Vitaminas</li>
+      <a href="https://www.youtube.com/watch?v=VuTis6DmIME&pp=ygUJbnV0cmljaW9u" target="_blank">
+        <img src="img/IMG/VITAMINAS.jpg" alt="Nutrición" class="img-fluid" />
+      </a>
+      <p>Orientación profesional sobre una nutrición adecuada con imágenes educativas:</p>
+      <ul class="nutricion-lista list-unstyled d-flex flex-wrap justify-content-center gap-3">
+        <li>
+          <a href="https://youtu.be/hK_aP-3LygM" target="_blank">
+            <img src="img/IMG/PROTEINAS.jpg" alt="Proteínas" />
+            <span>Proteínas</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=TXTsJAlYbNM&pp=ygUPcXVlIGVzIHVubGlwaWRv" target="_blank">
+            <img src="img/IMG/GRASAS.jpg" alt="Lípidos" />
+            <span>Lípidos</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=oz9zeP9tVTk&pp=ygUWcXVlIGVzIHVuIGNhcmJvaGlkcmF0b9IHCQmyCQGHKiGM7w%3D%3D" target="_blank">
+            <img src="img/IMG/CARBOHIDRATOS.jpg" alt="Carbohidratos" />
+            <span>Carbohidratos</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=5DRr2otjce4&pp=ygUTcXVlIGVzIHVuYSB2aXRhbWluYQ%3D%3D" target="_blank">
+            <img src="img/IMG/VITAMINAS 2.jpg" alt="Vitaminas" />
+            <span>Vitaminas</span>
+          </a>
+        </li>
       </ul>
     </div>
 
-    <div class="servicio deporte">
+    <!-- Deporte -->
+    <div class="servicio deporte text-center">
       <h3>Actividad Física y Deporte</h3>
-      <img src="img/IMG/DEPORTE TROTE.jpg" alt="Ejercicio por edad" />
-      <p>Planes de ejercicio personalizados según grupo etario y objetivos:</p>
-      <ul>
-        <li><img src="img/IMG/mantener ejrcicio.jpg" alt="Ejercicio para la salud" /> Para mantener la salud</li>
-        <li><img src="img/IMG/mejorar el rendimineto.jpg" alt="Ejercicio para el rendimiento" /> Para mejorar el rendimiento</li>
-        <li><img src="img/IMG/alto rendimiento.jpg" alt="Ejercicio competitivo" /> Para competir</li>
+      <a href="https://www.youtube.com/watch?v=LbD1Cmo3zRQ&pp=ygUbYWN0aXZpZGFkIGZpc2ljYSB5IGRlcHJvdGUg" target="_blank">
+        <img src="img/IMG/DEPORTE TROTE.jpg" alt="Deporte" class="img-fluid" />
+      </a>
+      <p>Planes de ejercicio personalizados por edad y objetivos:</p>
+      <ul class="nutricion-lista list-unstyled d-flex flex-wrap justify-content-center gap-3">
+        <li>
+          <a href="https://www.youtube.com/watch?v=ADiHiQ2UC8Q&pp=ygUgZWplcmNpY2lvIHBhcmEgbWFudGVuZXIgbGEgc2FsdWQ%3D" target="_blank">
+            <img src="img/IMG/mantener ejrcicio.jpg" alt="Mantener salud" />
+            <span>Para mantener la salud</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=eTn_hgP85k4&pp=ygUiZWplcmNpY2lvIHBhcmEgbWVqb3JhciByZW5kaW1pZW50bw%3D%3D" target="_blank">
+            <img src="img/IMG/mejorar el rendimineto.jpg" alt="Rendimiento" />
+            <span>Para mejorar el rendimiento</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/shorts/xZL18Dm0HBU" target="_blank">
+            <img src="img/IMG/alto rendimiento.jpg" alt="Competencia" />
+            <span>Para competir</span>
+          </a>
+        </li>
       </ul>
     </div>
   </section>
 
-  <section id="blog">
-    <h2>Blog - Aprende con Nosotros</h2>
-    <img src="img/IMG/VITAMINAS.jpg" alt="Blog de salud y bienestar" />
-    <p>
-      Publicaciones semanales con consejos, entrevistas y herramientas para tu
-      bienestar integral.
-    </p>
+  <!-- ========================== BLOG ========================== -->
+  <section id="blog" class="text-center py-5 bg-light">
+    <h2 class="mb-4">Blog</h2>
+    <p class="mb-4">Consejos, entrevistas y recursos semanales para tu bienestar.</p>
+
+    <a href="https://www.youtube.com/watch?v=556YctriJ_M&pp=ygU0c2FiaWFzIHF1ZSBlbCBjdWVycG8gbmVjZXNpdGEgcXVlIHRvbWVtb3Mgdml0YW1pbmFzIA%3D%3D" 
+       target="_blank" class="btn btn-success btn-lg mb-4">
+      📚 Aprende con Nosotros
+    </a>
+
+    <div class="mt-3">
+      <img src="img/IMG/VITAMINAS.jpg" alt="Blog sobre Vitaminas" class="img-fluid rounded shadow" style="max-width: 600px;">
+    </div>
   </section>
 
-  <section id="agenda">
+  <!-- ========================== AGENDA TU CITA ========================== -->
+  <section id="agenda" class="p-5 text-center">
     <h2>Agenda tu Cita</h2>
-    <img src="img/IMG/agenda tu cita.jpg" alt="Agenda tu cita" />
-    <form>
-      <label>Nombre: <input type="text" name="nombre" /></label><br />
-      <label>Teléfono: <input type="tel" name="telefono" /></label><br />
-      <label>Correo: <input type="email" name="correo" /></label><br />
-      <label>Tipo de servicio: <input type="text" name="servicio" /></label><br />
-      <label>Fecha y hora: <input type="datetime-local" name="fecha" /></label><br />
-      <button type="submit">Enviar</button>
+    <img src="img/IMG/agenda tu cita.jpg" alt="Agenda" class="img-fluid mb-3" />
+    <form class="w-75 mx-auto">
+      <div class="mb-2">
+        <label>Nombre: <input type="text" name="nombre" class="form-control" /></label>
+      </div>
+      <div class="mb-2">
+        <label>Teléfono: <input type="tel" name="telefono" class="form-control" /></label>
+      </div>
+      <div class="mb-2">
+        <label>Correo: <input type="email" name="correo" class="form-control" /></label>
+      </div>
+      <div class="mb-2">
+        <label>Tipo de servicio: <input type="text" name="servicio" class="form-control" /></label>
+      </div>
+      <div class="mb-3">
+        <label>Fecha y hora: <input type="datetime-local" name="fecha" class="form-control" /></label>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
   </section>
 
-  <section id="contacto">
+  <!-- ========================== CONTACTO ========================== -->
+  <section id="contacto" class="bg-dark text-white text-center p-4">
     <h2>Contáctanos</h2>
-        <p><strong>Dirección:</strong> Calle Principal #123, La Jagua de Ibirico, Colombia</p>
+    <p><strong>Dirección:</strong> Calle Principal #123, La Jagua de Ibirico, Colombia</p>
     <p><strong>Teléfono:</strong> +57 311 7619625</p>
     <p><strong>Correo:</strong> contacto@svanguardistaconsultoria.com</p>
   </section>
 
-  <footer>
+  <!-- ========================== FOOTER ========================== -->
+  <footer class="text-center p-4 bg-secondary text-white">
     <p>
-      © 2025 Bienestar y Salud Vanguardista Consultoría - Todos los derechos reservados son de la empresa elaborado por Manuel Gulloso Amary.<br />
-      Dirección: Calle Principal #123, La Jagua de Ibirico, Colombia<br />
-      Teléfono: +57 311 7619625 | Correo: contacto@svanguardistaconsultoria.com
+      © 2025 Vanguardista y Consultoría - Todos los derechos reservados.<br />
+      Elaborado por Manuel Gulloso Amarys<br />
+      Tel: +57 311 7619625 | contacto@svanguardistaconsultoria.com
     </p>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

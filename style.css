@@ -1,323 +1,248 @@
-//* Reset básico */
+/* =============== VARIABLES DE COLOR Y FUENTE =============== */
+:root {
+  --verde: #4CAF50;
+  --verde-claro: #74c69d;
+  --gris-oscuro: #2c2c2c;
+  --gris-claro: #f5f5f5;
+  --texto: #222;
+  --fondo: #ffffff;
+  --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =============== RESETEO =============== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fuente moderna */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-/* Cuerpo y tipografía */
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: var(--fuente);
+  background-color: var(--fondo);
+  color: var(--texto);
   line-height: 1.6;
-  background: #fff;
-  color: #222;
 }
 
-/* Header */
+/* =============== HEADER =============== */
 header {
-  background: linear-gradient(135deg, #0077ff, #00d4ff);
-  color: white;
-  padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 119, 255, 0.6);
+  background-color: var(--verde);
+  color: white;
+  padding: 2rem 1rem;
 }
 
 header h1 {
-  font-weight: 600;
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
-  font-weight: 300;
-  font-size: 1.3rem;
-  letter-spacing: 1.2px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  font-size: 1.2rem;
 }
 
-/* Menú de navegación */
+/* =============== NAV =============== */
 nav {
-  background: #004c99;
-  padding: 15px 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--gris-claro);
+  padding: 1rem;
 }
 
 nav button {
-  background-color: #00aaff;
+  background-color: var(--verde);
   color: white;
   border: none;
-  margin: 0 8px;           /* Ajustado */
-  padding: 8px 20px;       /* Ajustado */
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
   cursor: pointer;
-  font-weight: 600;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0,170,255,0.5);  /* Ajustado */
-  transition: all 0.3s ease;
-  font-size: 0.9rem;       /* Ajustado */
-  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 nav button:hover {
-  background-color: #008ecc;
-  box-shadow: 0 5px 12px rgba(0,140,204,0.7); /* Ajustado */
-  transform: translateY(-3px);
+  background-color: #388e3c;
 }
 
-/* Secciones */
+/* =============== CARRUSEL =============== */
+.carrusel-panoramico .carousel-item img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+/* =============== SECCIONES GENERALES =============== */
 section {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgb(0 0 0 / 0.08);
-}
-
-/* Diferentes fondos para secciones */
-#inicio {
-  background: #e1f5fe;
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
-  padding: 60px 20px;
-  border-radius: 16px;
 }
 
-#inicio img {
-  max-width: 300px;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--verde);
 }
 
-/* Sobre nosotros */
-#nosotros {
-  background: #fff8e1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
+/* =============== LOGO CENTRAL =============== */
+.logo-central {
+  max-width: 200px;
+  margin: 1rem auto 2rem;
+  display: block;
 }
 
-#nosotros img {
-  max-width: 350px;
-  flex: 1 1 350px;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(255, 193, 7, 0.35);
-}
-
-#nosotros p {
-  flex: 1 1 500px;
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #444;
-  line-height: 1.5;
-}
-
-
-
-/* Cada servicio como tarjeta */
+/* =============== SERVICIOS GENERALES =============== */
 .servicio {
-  display: flex;
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
-  padding: 20px;
-  align-items: center;
-  gap: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
-.servicio:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgb(0 0 0 / 0.18);
+  margin-bottom: 4rem;
 }
 
 .servicio img {
-  flex-shrink: 0;
-  width: 140px;
-  height: 140px;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  margin: 1rem 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
 
-.servicio > div {
-  flex: 1;
+.servicio img:hover {
+  transform: scale(1.03);
 }
 
-/* Títulos de servicios */
-.servicio h3 {
-  margin-bottom: 12px;
-  font-weight: 600;
-  font-size: 1.6rem;
-  color: #0077ff;
-}
-
-/* Texto dentro del servicio */
-.servicio p {
-  margin-bottom: 10px;
-  font-weight: 400;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.4;
-}
-
-/* Listas de items */
-.servicio ul {
+/* =============== LISTAS PERSONALIZADAS CON IMÁGENES GRANDES =============== */
+.nutricion-lista {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.servicio ul li {
+.nutricion-lista li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 10px 0;
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: #444;
+  gap: 20px;
+  transition: transform 0.3s ease;
 }
 
-.servicio ul li img {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
+.nutricion-lista li:hover {
+  transform: scale(1.03);
+}
+
+.nutricion-lista li a {
+  text-decoration: none;
+  color: var(--texto);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nutricion-lista li img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border: 4px solid var(--verde);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Blog */
-#blog {
-  background: #e8f5e9;
-  text-align: center;
-  border-radius: 16px;
+.nutricion-lista li:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+.nutricion-lista li span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
+
+/* =============== BLOG =============== */
 #blog img {
-  max-width: 400px;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(76,175,80,0.35);
-  margin: 20px 0;
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+
+  
 }
 
-#blog p {
-  font-size: 1.1rem;
-  font-weight: 400;
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-  color: #2e7d32;
-}
-
-/* Formulario en agenda */
-#agenda {
-  background: #fff3e0;
-  border-radius: 16px;
-  padding-bottom: 40px;
-}
-
-#agenda img {
-  max-width: 320px;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.35);
-  margin: 20px auto;
-  display: block;
-}
-
+/* =============== FORMULARIO CITA =============== */
 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   max-width: 600px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: auto;
+  padding-top: 1rem;
 }
 
 form label {
-  display: block;
-  margin-bottom: 12px;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #bf360c;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  color: var(--texto);
 }
 
 form input {
   width: 100%;
-  padding: 10px 12px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 2px solid #ffb74d;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-form input:focus {
-  border-color: #ff6f00;
-  outline: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 form button {
-  margin-top: 18px;
-  padding: 14px 40px;
-  background-color: #ff6f00;
+  background-color: var(--verde);
   color: white;
+  padding: 0.7rem 1.5rem;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
+  font-weight: bold;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 1.1rem;
   transition: background-color 0.3s ease;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 6px 15px rgba(255,111,0,0.6);
 }
 
 form button:hover {
-  background-color: #e65100;
-  box-shadow: 0 8px 20px rgba(230,81,0,0.8);
+  background-color: #2e7d32;
 }
 
-/* Footer */
+/* =============== CONTACTO Y FOOTER =============== */
 footer {
+  background-color: var(--gris-oscuro);
+  color: white;
   text-align: center;
-  padding: 20px 10px;
-  background-color: #004c99;
-  color: #d0d0d0;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1.2px;
-  box-shadow: 0 -3px 15px rgba(0,76,153,0.6);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
-/* Responsive */
-/* Móvil */
-@media (max-width: 600px) {
-  nav button {
-    display: block;
-    margin: 10px auto;
-    width: 90%;
-    font-size: 1.1rem;
+/* =============== RESPONSIVE =============== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
   }
 
-  #nosotros {
+  .nutricion-lista li {
     flex-direction: column;
     text-align: center;
   }
 
-  #nosotros p {
-    flex: 1 1 100%;
-    margin-top: 20px;
+  .nutricion-lista li img {
+    width: 100px;
+    height: 100px;
   }
 
- 
-/* Tablets */
-@media (max-width: 900px) and (min-width: 601px) {
-  nav button {
-    margin: 0 10px;
-    padding: 12px 24px;
+  .servicio img {
+    max-width: 90%;
+  }
+
+  header h1 {
+    font-size: 2rem;
   }
 }
