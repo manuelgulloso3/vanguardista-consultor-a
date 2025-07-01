@@ -245,4 +245,106 @@ footer {
   header h1 {
     font-size: 2rem;
   }
+}:root {
+  --verde: #4CAF50;
+  --verde-claro: #74c69d;
+  --gris-oscuro: #2c2c2c;
+  --gris-claro: #f5f5f5;
+  --texto: #222;
+  --fondo: #ffffff;
+  --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* NAV */
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--gris-claro);
+  padding: 1rem;
+}
+
+.nav-buttons button {
+  background-color: var(--verde);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav-buttons button:hover {
+  background-color: #388e3c;
+}
+
+/* HEADER */
+header {
+  background-color: var(--verde);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* CARRUSEL */
+.carrusel-panoramico .carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--gris-oscuro);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .carrusel-panoramico .carousel-item img {
+    height: 40vh;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
 }
